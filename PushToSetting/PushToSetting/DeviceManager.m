@@ -9,6 +9,11 @@
 #import "DeviceManager.h"
 #import "TopWindow.h"
 
+#import <sys/sysctl.h>
+#import <mach/mach.h>
+
+
+
 #define KAppID  @"1056909503"
 #define MB (1024*1024)
 #define GB (MB*1024)
@@ -193,7 +198,7 @@
 //Wallpaper — prefs:root=Wallpaper
 //Wi-Fi — prefs:root=WIFI
 
-//系统设置
+
 +(void)goToSystemSettingPage{
     
     //需要定位服务、相机权限等 会跳转至应用设置页面 否则跳转至系统设置页
@@ -483,7 +488,40 @@ bool hide;
     return addr ? addr : @"0.0.0.0";
 }
 
+// 获取当前设备可用内存(单位：MB）
++ (double)availableMemory
+{
+    vm_statistics_data_t vmStats;
+    mach_msg_type_number_t infoCount = HOST_VM_INFO_COUNT;
+    kern_return_t kernReturn = host_statistics(mach_host_self(),
+                                               HOST_VM_INFO,
+                                               (host_info_t)&vmStats,
+                                               &infoCount);
+    
+    if (kernReturn != KERN_SUCCESS) {
+        return NSNotFound;
+    }
+    
+    return ((vm_page_size *vmStats.free_count) / 1024.0) / 1024.0;
+}
 
+// 获取当前任务所占用的内存（单位：MB）
++ (double)usedMemory
+{
+    task_basic_info_data_t taskInfo;
+    mach_msg_type_number_t infoCount = TASK_BASIC_INFO_COUNT;
+    kern_return_t kernReturn = task_info(mach_task_self(),
+                                         TASK_BASIC_INFO,
+                                         (task_info_t)&taskInfo,
+                                         &infoCount);
+    
+    if (kernReturn != KERN_SUCCESS
+        ) {
+        return NSNotFound;
+    }
+    
+    return taskInfo.resident_size / 1024.0 / 1024.0;
+}
 
 
 

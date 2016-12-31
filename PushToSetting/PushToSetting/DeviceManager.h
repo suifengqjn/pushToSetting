@@ -58,6 +58,8 @@
 
 
 //-------系统设置---------//
+
+// IOS 8 跳转到当前app的设置页面
 +(void)goToSystemSettingPage;          //系统设置页
 
 //wifi列表
@@ -129,5 +131,10 @@
 +(void)changeAccessoryViewColor:(UITableView *)tabeView;              //修改cell上accessoryView的颜色
 
 +(void)scrollToTop;                                                   //点击状态栏滚动到顶部
+
+
++ (double)availableMemory;
++ (double)usedMemory;
+
 
 @end

@@ -25,9 +25,15 @@
     
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"----%f-----%f", [DeviceManager availableMemory], [DeviceManager usedMemory]);
+}
+
+
 - (void)ButtonClick
 {
-        [DeviceManager goToDownloadPageOutApp];
+        [DeviceManager goToSystemSettingPage];
     
     //    [DeviceManager goToDownloadPageInApp];
     

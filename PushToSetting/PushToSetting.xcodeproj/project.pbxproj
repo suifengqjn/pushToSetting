@@ -120,6 +120,7 @@
 				TargetAttributes = {
 					C242A1041CC392F9002A64B5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VN226642G5;
 					};
 				};
 			};
@@ -275,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VN226642G5;
 				INFOPLIST_FILE = PushToSetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suifeng.PushToSetting;
@@ -286,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VN226642G5;
 				INFOPLIST_FILE = PushToSetting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.suifeng.PushToSetting;
@@ -312,6 +315,7 @@
 				C242A11E1CC392F9002A64B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
