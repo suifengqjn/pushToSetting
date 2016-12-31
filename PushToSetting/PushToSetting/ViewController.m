@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DeviceManager.h"
+#import "FMMemoryTip.h"
 @interface ViewController ()
 
 @end
@@ -21,7 +22,12 @@
     button.frame = CGRectMake(100, 100, 100, 100);
     [button setTitle:@"按钮" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(ButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+//[self.view addSubview:button];
+    [FMMemoryTip getInstance];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication].keyWindow addSubview:button];
+    });
     
 }
 

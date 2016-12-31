@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DD4F3351E178491003C04C8 /* FMMemoryTip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F3341E178491003C04C8 /* FMMemoryTip.m */; };
 		C242A10A1CC392F9002A64B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C242A1091CC392F9002A64B5 /* main.m */; };
 		C242A10D1CC392F9002A64B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C242A10C1CC392F9002A64B5 /* AppDelegate.m */; };
 		C242A1101CC392F9002A64B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C242A10F1CC392F9002A64B5 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DD4F3331E178491003C04C8 /* FMMemoryTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMemoryTip.h; sourceTree = "<group>"; };
+		1DD4F3341E178491003C04C8 /* FMMemoryTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMemoryTip.m; sourceTree = "<group>"; };
 		C242A1051CC392F9002A64B5 /* PushToSetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushToSetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C242A1091CC392F9002A64B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C242A10B1CC392F9002A64B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				C242A10F1CC392F9002A64B5 /* ViewController.m */,
 				C242A11F1CC39889002A64B5 /* DeviceManager.h */,
 				C242A1201CC39889002A64B5 /* DeviceManager.m */,
+				1DD4F3331E178491003C04C8 /* FMMemoryTip.h */,
+				1DD4F3341E178491003C04C8 /* FMMemoryTip.m */,
 				C242A1221CC39921002A64B5 /* TopWindow.h */,
 				C242A1231CC39921002A64B5 /* TopWindow.m */,
 				C242A1111CC392F9002A64B5 /* Main.storyboard */,
@@ -161,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C242A1101CC392F9002A64B5 /* ViewController.m in Sources */,
+				1DD4F3351E178491003C04C8 /* FMMemoryTip.m in Sources */,
 				C242A1211CC39889002A64B5 /* DeviceManager.m in Sources */,
 				C242A10D1CC392F9002A64B5 /* AppDelegate.m in Sources */,
 				C242A1241CC39921002A64B5 /* TopWindow.m in Sources */,

@@ -515,8 +515,7 @@ bool hide;
                                          (task_info_t)&taskInfo,
                                          &infoCount);
     
-    if (kernReturn != KERN_SUCCESS
-        ) {
+    if (kernReturn != KERN_SUCCESS) {
         return NSNotFound;
     }
     
