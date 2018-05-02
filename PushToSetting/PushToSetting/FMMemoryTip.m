@@ -137,7 +137,19 @@
     float offsetX = nowPoint.x - _beginPoint.x;
     float offsetY = nowPoint.y - _beginPoint.y;
     
-    self.center = CGPointMake(self.center.x + offsetX, self.center.y + offsetY);
+    float moveToX = self.center.x + offsetX;
+    float moveToY = self.center.y + offsetY;
+    
+    if (moveToX <= k_memory_tip_Width/2 || moveToX >= [UIScreen mainScreen].bounds.size.width - k_memory_tip_Width/2) {
+        return;
+    }
+    
+    if (moveToY <= k_memory_tip_Width/2 || moveToY >= [UIScreen mainScreen].bounds.size.height - k_memory_tip_Width/2) {
+        return;
+    }
+    
+    self.center = CGPointMake(moveToX, moveToY);
+
 }
 
 - (void)dealloc
